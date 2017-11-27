@@ -21,10 +21,11 @@
 //GLOBAL VARIABLES
 
 
-
 //FUNCTIONS
 
 
 
 // DOCUMENT READY FUNCTION
+$( document ).ready(function() {
 
+});
