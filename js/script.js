@@ -28,3 +28,32 @@
 
 // DOCUMENT READY FUNCTION
 
+$( document ).ready(function() {
+  
+  var UserChoices = "";
+  
+  var ComputerChoice = "";
+  
+  var winner = "";
+  
+  var choices = ["rock","paper","scissors"];
+  
+  $("#userButton").click(function(){
+          
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+});
