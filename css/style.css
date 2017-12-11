@@ -1,3 +1,18 @@
 body {
     text-align: center;
 }
+
+.thumbnailPhoto {
+    height: 200px;
+    display: block;
+    margin: auto;
+    width: 200px;
+}
+
+#userSide {
+    float: left;
+}
+
+#compSide {
+    float: right;
+}
