@@ -9,10 +9,11 @@ body {
     width: 200px;
 }
 
-#userSide {
-    float: left;
+.container {
+    display: flex;
+    flex-direction: column;
 }
 
-#compSide {
-    float: right;
+#center-row {
+    margin: auto;
 }
