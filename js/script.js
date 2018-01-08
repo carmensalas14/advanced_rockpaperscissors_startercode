@@ -30,30 +30,27 @@
 
 $( document ).ready(function() {
   
-  var UserChoices = "";
+  var computerChoice = [
+      "paper",
+      "rock",
+      "scissors"
+  ];
+    console.log(computerChoice.length);
   
-  var ComputerChoice = "";
+  var num = Math.floor( Math.random()*3);
+
+console.log(num);
+  
+  
+  var ComputerChoice = computerChoice[num];
   
   var winner = "";
   
   var choices = ["rock","paper","scissors"];
   
   $("#userButton").click(function(){
+    $("#serChoice").append($("#user").val());
+    console.log("Thomas");      
           
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  });
 });
