@@ -1,56 +1,108 @@
-//Class 1:
-        // Fork and clone the repo and set up your project workspace and link files
-        // Write HTML for your project
-//Class 2:  
-        // Declare four global variables for intial state of the list of choices, the computer choice, the user choice, and the winner.  
-        // Practice using console.log() and debugger to debug your code
-        // Create your document ready function. 
-        // Create a click hander for when the "Shoot!" button is clicked, takes in the user choice from the input field, 
-        // Display the user choice to the output screen
-//Class 3:  
-        // Randomly choose among 'rock', 'paper', or 'scissors' from the list of choices 
-        // Display the computer choice to the output screen
-        // Compare the user choice and the computer choice to determine who won. 
-        // Display the user winner to the output screen 
-        // Clear the input box for the next choice
-
-// *************************** YOUR CODE BELOW *******************************
-//******************TEST EARLY AND OFTEN USING console.log() ******************
-//****************** SERIOUSLY TEST USING console.log()!!! ******************
-
-//GLOBAL VARIABLES
-
-
-
-//FUNCTIONS
-
-
-
-// DOCUMENT READY FUNCTION
 
 $( document ).ready(function() {
-  
-  var computerChoice = [
-      "paper",
-      "rock",
-      "scissors"
-  ];
-    console.log(computerChoice.length);
-  
-  var num = Math.floor( Math.random()*3);
+    
+    $( "button" ).click(function() {
+                
+        var Answers = ["Rock", "Paper", "Scissors"];
+        var compAnswer = Answers[Math.floor(Math.random()*Answers.length)];
+        var getCompAnswer = document.innerHTML = compAnswer.toString();
+            
+        $("#compChoice").html(getCompAnswer);
+                
+        var userInput = $("input").val();
+        var rockImg = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Rock-paper-scissors_%28rock%29.png/1024px-Rock-paper-scissors_%28rock%29.png";
+        var paperImg = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Rock-paper-scissors_%28paper%29.png/1024px-Rock-paper-scissors_%28paper%29.png";
+        var scissorsImg = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Rock-paper-scissors_%28scissors%29.png/1024px-Rock-paper-scissors_%28scissors%29.png";
+                
+            // IF USER CHOOSES ROCK
+            if(userInput === "Rock") {
 
-console.log(num);
+                $("#userPhoto").attr("src", rockImg);
+
+                    if (getCompAnswer === userInput) {
+                            $("#compPhoto").attr("src", rockImg);
+                            $("#results").html("Tie");
+                                
+                    }
+                                
+                    if (getCompAnswer === "Paper") {
+                            $("#compPhoto").attr("src", paperImg);
+                            $("#results").html("You lose");
+                                
+                    }
+                        
+                    if (getCompAnswer === "Scissors") {
+                                        
+                            $("#compPhoto").attr("src", scissorsImg);
+                            $("#results").html("You win");      
+                                
+                    }
+                                
+            }
+            // IF USER CHOOSES ROCK CLOSED 
+                    
+                    // IF USER CHOOSES PAPER
+            if(userInput === "Paper") {
+                                
+                    $("#userPhoto").attr("src",paperImg);
+                                
+                        if (getCompAnswer === "Rock") {
+                                $("#compPhoto").attr("src", rockImg);
+                                $("#results").html("You win");      
+                                
+                            
+                        }
+                        
+                        if (getCompAnswer === userInput) {
+                            $("#compPhoto").attr("src", paperImg);
+                            $("#results").html("Tie");
+                                
+                            
+                        }
+                        
+                        if (getCompAns === "Scissors") {
+                            $("#compPhoto").attr("src", scissorsImg);
+                            $("#results").html("You lose");
+                                
+                            
+                        }
+                                
+            }
+            // IF USER CHOOSES PAPER CLOSED
+            
+                    
+                    // IF USER CHOOSES SCISSORS
+            if(userInput === "Scissors") {
+                        
+                    $("#userPhoto").attr("src", scissorsImg);
+
+                        if (getCompAnswer === "Rock") {
+                            $("#compPhoto").attr("src", rockImg);
+                            $("#results").html("You lose");      
+                        
+                            
+                        }
+                        
+                        if (getCompAnswer === "Paper") {
+                            $("#compPhoto").attr("src", paperImg);
+                            $("#results").html("You win");
+                                
+                            
+                        }
+                        
+                        if (getCompAnswer === userInput) {
+                            $("#compPhoto").attr("src", scissorsImg);
+                            $("#results").html("Tie");
+                            
+                            
+                        }
+                                
+            }
+            // IF USER CHOOSES SCISSORS CLOSED
+            
+        });
+   
+
+
   
-  
-  var ComputerChoice = computerChoice[num];
-  
-  var winner = "";
-  
-  var choices = ["rock","paper","scissors"];
-  
-  $("#userButton").click(function(){
-    $("#serChoice").append($("#user").val());
-    console.log("Thomas");      
-          
-  });
 });

@@ -1,1 +1,32 @@
+body {
+    text-align: center;
+font-family: 'Short Stack', cursive;
+background-color: blue;
 
+}
+
+#userInput{
+    height:50px;
+    width:300px;
+    font-size: 50px;
+}
+
+.thumbnailPhoto {
+    height: 300px;
+    display: block;
+    margin: auto;
+    width: 300px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+#center-row {
+    margin: auto;
+}
+
+#results{
+    font-size: 100px;
+}
